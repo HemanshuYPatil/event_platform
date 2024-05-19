@@ -31,6 +31,7 @@ const Collection = ({
             {data.map((event) => {
               const hasOrderLink = collectionType === 'Events_Organized';
               const hidePrice = collectionType === 'My_Tickets';
+              // if (event._id) return null;
 
               return (
                 <li key={event._id} className="flex justify-center">
