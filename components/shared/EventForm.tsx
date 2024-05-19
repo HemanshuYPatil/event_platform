@@ -40,7 +40,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
     }
     : eventDefaultValues;
   const router = useRouter();
-
+  console.log(userId);
   const { startUpload } = useUploadThing('imageUploader')
 
   const form = useForm<z.infer<typeof eventFormSchema>>({
@@ -76,6 +76,8 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
       } catch (error) {
         console.log(error);
       }
+    }else{
+      console.log("Hello");
     }
 
     if(type === 'Update') {
